@@ -1,0 +1,331 @@
+
+@font-face{
+    font-family: 'Gilroy';
+    src: url(./Gilroy-Regular.woff) format(woff);
+}
+/* ---------------------------------------------- */
+/*                    GENERAL                     */
+/* ---------------------------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+}
+html{
+    font-size: 18px;
+}
+.hide{
+    display: none;
+}
+.fadeIn{
+    animation: fade 0.5s ease-in-out;
+}
+style{
+    background-color: yellow;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* ---------------------------------------------- */
+/*                    HEADER                      */
+/* ---------------------------------------------- */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 120000px;
+    width: 100%;
+    height: 80px;
+
+    margin: 0 auto;
+
+    background-color: rgb(22 23 30);
+}
+/* -------- LOGO -------- */
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+.logo img{
+    width: 60px;
+}
+.logo p {
+    font-weight: bold;
+    margin-left: 19px;
+    color: #ffffff;
+}
+#button{
+    color: yellow;
+}
+/* -------- NAV -------- */
+
+
+nav ul{
+    display: flex;
+    align-items: right;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li:last-child{
+    padding-right: 100px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #6a149b;
+    padding: 10px;
+}
+
+
+/* ---------------------------------------------- */
+/*                      MAIN                      */
+/* ---------------------------------------------- */
+
+
+
+main{
+    max-width: 12000px;
+    margin: 0 auto;
+}
+/* -------- BG IMAGE -------- */
+.stats{
+    width: 100%;
+    background-image: linear-gradient(rgba(3, 3, 3, 0.9)9), rgba(0, 0, 0, 0.9) ,url('../resources/img/covid-cells.jpg');
+    background-size: cover;
+}
+#container{
+    background-image: linear-gradient(rgba(3, 3, 3, 0.9)9), rgba(0, 0, 0, 0.9) ,url('../img/covid-cells.jpg');
+    background-size: cover;
+}
+/* -------- LATEST REPORT -------- */
+.latest-report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 28px;
+
+    color: rgb(233, 20, 20);
+}
+
+.country,
+.total-cases,
+/* .recovered, */
+.deaths{
+
+    height: 80px;
+    padding-left: 250px;
+    /* color:red; */
+}
+
+.name{
+    margin-bottom: 0px;
+    font-size: 2em;
+    color: #fff7ff;
+    font-weight: bold;
+}
+
+.change-country{
+    cursor: pointer;
+    margin-top: 2px;
+    font-size: 18px;
+    
+    font-weight: bold;
+    
+    /* position: static; */
+}
+.change-country button{
+    font-weight: bold;
+    font-size: 15px;
+    border-width: 2px;
+    border-radius: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.title1{
+    font-size: 1.7em;
+    font-weight: bold;
+    color: rgb(7 221 255 / 89%);
+}
+.title2{
+    font-size: 1.7em;
+    font-weight: bold;
+    color: rgb(88, 241, 11);
+}
+.title3{
+    font-size: 1.7em;
+    font-weight: bold;
+    color: rgb(241, 11, 11);
+}
+.total-cases .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+/* .recovered .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+} */
+.deaths .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+.new-value1{
+    font-size: 1.3em;
+    color: rgb(7 221 255 / 89%);
+}
+.new-value2{
+    font-size: 1.3em;
+    color: rgb(88, 241, 11);
+}
+.new-value3{
+    font-size: 1.3em;
+    color: red;
+}
+/* -------- CHART -------- */
+.chart{
+    width: 80%;
+    height: 74vh;
+    min-height: 500px;
+
+    margin: 0 auto;
+    padding: 50px 0;
+}
+/* -------- SEARCH COUNTRY -------- */
+.search-country{
+    position: relative;
+    top: 10px;
+    /* justify-content: right; */
+    /* padding-right: 500px; */
+   
+}
+.search-box{
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding-right: 100px; */
+    width: 400px;
+    height: 30px;
+
+    background-color: #111;
+
+    z-index: 1;
+}
+.search-box input{
+    width: 360px;
+    height: 25px;
+
+    border: none;
+
+    background-color: transparent;
+    color: #FFF;
+
+    padding-left: 15px;
+
+    font-size: 1.1em;
+}
+.search-box img{
+    width: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.country-list{
+    display: flex;
+
+    position: absolute;
+    top: 30px;
+
+    width: 400px;
+    height: 300px;
+
+    background-color: #111;
+    opacity: 0.9;
+
+    overflow-y: scroll;
+}
+
+.country-list ul{
+    width: 100%;
+}
+
+.country-list ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #FFF;
+}
+.country-list ul li:hover{
+    border-left: 2px solid #FFF;
+}
+/* SCROLL BAR */
+.country-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .country-list::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  /* Handle */
+  .country-list::-webkit-scrollbar-thumb {
+    background: #F1F1F1;
+  }
+  
+  /* Handle on hover */
+  .country-list::-webkit-scrollbar-thumb:hover {
+    background: #FFF;
+  }
+/* ---------------------------------------------- */
+/*                    FOOTER                      */
+/* ---------------------------------------------- */
+footer{
+    max-width: 1200px;
+    height: 60px;
+
+    margin: 0 auto;
+    background-color: #6a149b;
+}
+
+.footer-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyright p{
+    color: #FFF;
+}
+/* ---------------------------------------------- */
+/*             SCREEN WIDTH < 600px               */
+/* ---------------------------------------------- */
+@media screen and (max-width: 600px){
+    .latest-report{
+        display: flex;
+        font-weight: bold;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
